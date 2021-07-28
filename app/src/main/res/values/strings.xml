@@ -14,4 +14,23 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_to_the_gifts_page">Welcome To The Gifts Page</string>
+    <string name="heart_icon_1">Heart icon 1</string>
+    <string name="heart_icon_2">Heart icon 2</string>
+    <string name="heart_icon_1b">Heart icon 1b</string>
+    <string name="heart_icon_3">Heart icon 3</string>
+    <string name="notification_badge">Notification badge</string>
+    <string name="notification_bell">Notification bell</string>
+    <string name="search_icon">Search icon</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="vertical_bar">Vertical bar</string>
+    <string name="cake_icon">Cake icon</string>
+    <string name="calendar_icon">Calendar icon</string>
+    <string name="slider_image">Slider image</string>
+    <string name="call_icon">Call icon</string>
+    <string name="message_icon">Message icon</string>
+    <string name="top_of_message_icon">Top of message icon</string>
+    <string name="share_icon">Share icon</string>
+    <string name="pen_icon">Pen icon</string>
+    <string name="horizontal_rule_below_pen_icon">Horizontal rule below pen icon</string>
+    <string name="celebration_icon">Celebration icon</string>
 </resources>

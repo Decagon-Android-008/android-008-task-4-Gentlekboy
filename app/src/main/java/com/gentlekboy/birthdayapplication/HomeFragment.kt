@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import java.lang.Math.abs
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,49 +38,52 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_home, container, false)
 
+//        Arraylist of recycler view items
         val birthdayList = arrayListOf(
-            Birthdays("Ola Machiavelli", R.drawable.person_1, R.drawable.bar_1),
-            Birthdays("Samuel Garfield", R.drawable.person_2, R.drawable.bar_2),
-            Birthdays("Kome Holmes", R.drawable.person_3, R.drawable.bar_3),
-            Birthdays("Ola Machiavelli", R.drawable.person_1, R.drawable.bar_1),
-            Birthdays("Samuel Garfield", R.drawable.person_2, R.drawable.bar_2),
-            Birthdays("Kome Holmes", R.drawable.person_3, R.drawable.bar_3),
             Birthdays("Ola Machiavelli", R.drawable.person_1, R.drawable.bar_1),
             Birthdays("Samuel Garfield", R.drawable.person_2, R.drawable.bar_2),
             Birthdays("Kome Holmes", R.drawable.person_3, R.drawable.bar_3),
             Birthdays("Omolade Rogers", R.drawable.person_4, R.drawable.bar_4)
         )
 
+//        Connect recycler view adapter to layout hosting the recycler view
         val birthdayAdapter = BirthdayAdapter(birthdayList)
         val recyclerViewContainer = view.findViewById<RecyclerView>(R.id.recyclerViewContainer)
         recyclerViewContainer.adapter = birthdayAdapter
         recyclerViewContainer.layoutManager = LinearLayoutManager(requireContext())
         birthdayAdapter.notifyDataSetChanged()
 
+//        Arraylist of viewpager items
         val imageList = arrayListOf(
-            Images(R.drawable.slider_1),
-            Images(R.drawable.slider_1),
-            Images(R.drawable.slider_1),
-            Images(R.drawable.slider_1),
-            Images(R.drawable.slider_1)
+            Images(R.drawable.slider_1, "It's Victor's Birthday"),
+            Images(R.drawable.samuel, "It's Samuel's Birthday"),
+            Images(R.drawable.tolu, "It's Tolulope's Birthday"),
+            Images(R.drawable.osehi, "It's Osehi's Birthday"),
+            Images(R.drawable.godday, "It's Godday's Birthday")
         )
 
+//        Connect viewpager adapter to layout hosting the viewpager
         val viewpagerAdapter = ViewpagerAdapter(imageList)
         val viewPager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
         viewPager2.adapter = viewpagerAdapter
 
+//        Set padding between viewpager items
         viewPager2.clipToPadding = false
         viewPager2.clipChildren = false
         viewPager2.offscreenPageLimit = 3
-        viewPager2.setPadding(-9, 0, 99, 0)
 
-        val compoTrans = CompositePageTransformer()
-        compoTrans.addTransformer { page, position ->
+        viewPager2.setPadding(-20, 0, 110, 0)
+
+//        Scale the image on translation across the x-axis
+        val compositePageTransformer = CompositePageTransformer()
+
+        compositePageTransformer.addTransformer { page, position ->
             val r: Float = 1 - kotlin.math.abs(position)
             page.translationX = 60f
             page.scaleY = 0.85f + r * 0.15f
         }
-        viewPager2.setPageTransformer(compoTrans)
+
+        viewPager2.setPageTransformer(compositePageTransformer)
 
         return view
     }

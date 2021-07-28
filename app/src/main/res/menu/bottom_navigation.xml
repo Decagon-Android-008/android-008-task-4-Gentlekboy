@@ -5,18 +5,18 @@
     <item
         android:id="@+id/homeMenu"
         android:title="@string/home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/home_icon"
         android:enabled="true"/>
 
     <item
         android:id="@+id/peopleMenu"
         android:title="@string/people"
-        android:icon="@drawable/people"
+        android:icon="@drawable/person_icon"
         android:enabled="true"/>
 
     <item
         android:id="@+id/giftMenu"
         android:title="@string/gifts"
-        android:icon="@drawable/gift"
+        android:icon="@drawable/gift_icon"
         android:enabled="true"/>
 </menu>

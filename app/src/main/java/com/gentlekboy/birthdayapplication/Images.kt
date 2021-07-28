@@ -1,5 +1,7 @@
 package com.gentlekboy.birthdayapplication
 
+//Data class for viewpager
 data class Images (
-    var firstImage: Int,
+    var sliderImage: Int,
+    var sliderText: String
 )

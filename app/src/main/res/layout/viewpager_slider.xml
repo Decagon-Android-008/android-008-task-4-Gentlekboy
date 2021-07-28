@@ -13,14 +13,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/slider_1" />
+        app:srcCompat="@drawable/slider_1"
+        android:contentDescription="@string/slider_image" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="36dp"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/slider_1"
         app:layout_constraintStart_toStartOf="@+id/slider_1">
@@ -34,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:contentDescription="@string/call_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +65,8 @@
                 android:src="@drawable/top_envelope"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView4"
                 app:layout_constraintEnd_toEndOf="@+id/imageView4"
-                app:layout_constraintStart_toStartOf="@+id/imageView4" />
+                app:layout_constraintStart_toStartOf="@+id/imageView4"
+                android:contentDescription="@string/message_icon" />
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -74,7 +77,8 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/envelope" />
+                app:srcCompat="@drawable/envelope"
+                android:contentDescription="@string/top_of_message_icon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -82,7 +86,7 @@
         android:id="@+id/cardView3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="44dp"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="@+id/slider_1"
@@ -96,6 +100,7 @@
                 android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/share_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -113,7 +118,8 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toEndOf="@+id/slider_1"
         app:layout_constraintTop_toTopOf="@+id/slider_1"
-        app:srcCompat="@drawable/pen" />
+        app:srcCompat="@drawable/pen"
+        android:contentDescription="@string/pen_icon" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -123,7 +129,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/under_pen" />
+        app:srcCompat="@drawable/under_pen"
+        android:contentDescription="@string/horizontal_rule_below_pen_icon" />
 
     <TextView
         android:id="@+id/textView"
@@ -147,14 +154,14 @@
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:srcCompat="@drawable/celebration" />
+        app:srcCompat="@drawable/celebration"
+        android:contentDescription="@string/celebration_icon" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/sliderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="It's Victor's Birthday."
         android:textColor="@color/white"
         android:textSize="16sp"
         android:fontFamily="@font/montserrat"

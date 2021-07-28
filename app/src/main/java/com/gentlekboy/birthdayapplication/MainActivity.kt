@@ -6,18 +6,22 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    val fragmentManager = supportFragmentManager
+//    Initialized fragment manager for fragment transactions
+    private val fragmentManager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        Add home fragment on the main activity as soon as activity is created
+        fragmentManager.beginTransaction().replace(R.id.frame_layout, HomeFragment()).commit()
 
-        fragmentManager.beginTransaction().replace(R.id.frame_layout, HomeFragment(), "Fragment 1").commit()
-
-        findViewById<BottomNavigationView>(R.id.bottomNavigationView).setOnNavigationItemSelectedListener(navListener)
+//        Set bottom navigation item select listener
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener)
     }
 
+//    Function adds fragments on selection of different navigation items
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
 
         var selectedFragment: Fragment? = null
@@ -33,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 selectedFragment = GiftFragment()
             }
         }
+
         if (selectedFragment != null) {
             val transaction = fragmentManager.beginTransaction()
             transaction.replace(R.id.frame_layout, selectedFragment).commit()
