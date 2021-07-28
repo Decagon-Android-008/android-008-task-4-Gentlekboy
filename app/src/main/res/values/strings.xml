@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Birthday Application</string>
+    <string name="home">Home</string>
+    <string name="people">People</string>
+    <string name="gifts">Gifts</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="add_upcoming_birthdays">Add upcoming birthdays</string>
+    <string name="ola_machiavelli">Ola Machiavelli</string>
+    <string name="_20_10_2020">20.10.2020</string>
+    <string name="_30_days_left">30 days left</string>
+    <string name="search_for_celebrants">Search for celebrants…</string>
+    <string name="upcoming_birthdays">Upcoming Birthdays</string>
+    <string name="yaay">yaay!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_the_gifts_page">Welcome To The Gifts Page</string>
+</resources>
